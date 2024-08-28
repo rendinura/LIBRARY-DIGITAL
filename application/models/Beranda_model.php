@@ -32,7 +32,7 @@ class Beranda_model extends CI_Model
 
     public function update_stok_single($id, $jumlah)
     {
-        $this->db->set('stok', 'stok -s' . $jumlah, FALSE);
+        $this->db->set('stok', 'stok -' . $jumlah, FALSE);
         $this->db->where('id_buku', $id);
         $this->db->update('buku');
     }
